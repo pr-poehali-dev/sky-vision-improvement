@@ -29,27 +29,7 @@ export default function Footer() {
                   Контакты
                 </a>
               </div>
-              <div className="flex flex-col gap-1 sm:gap-2">
-                <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Инвесторам</h3>
-                <a
-                  href="#about"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  О проекте
-                </a>
-                <a
-                  href="#build"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Построить
-                </a>
-                <a
-                  href="#roi"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Доходность
-                </a>
-              </div>
+
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
               <h1 className="text-[18vw] sm:text-[16vw] lg:text-[14vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
