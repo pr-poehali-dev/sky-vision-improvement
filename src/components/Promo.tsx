@@ -25,13 +25,8 @@ export default function Promo() {
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Инвестиции в природу
-      </h3>
-
       <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Постройте свой A-Frame под ключ и начните зарабатывать на краткосрочной аренде.
-        Природный отдых — один из самых быстрорастущих сегментов туризма.
+        Успейте забронировать и приятно отдохнуть в уютных благоустроенных домах.
       </p>
     </div>
   );
