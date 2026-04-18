@@ -15,8 +15,7 @@ export default function Featured({ onBooking }: FeaturedProps) {
       <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
         <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Почему A-Frame</h3>
         <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Треугольная архитектура, панорамные окна и запах хвои с утра. Каждый домик — это отдельная история,
-          вписанная в ландшафт так, будто он всегда здесь был.
+          Кемпинги из экологичных материалов, эстетичного вида. Данные строения вызывают ассоциации с палатками, шалашами, отдыхом. Минималистичные лаконичные дома гармонично вписываются в окружающий ландшафт и позволяют чувствовать единение с природой.
         </p>
         <button
           onClick={onBooking}
