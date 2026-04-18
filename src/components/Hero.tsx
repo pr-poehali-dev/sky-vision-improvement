@@ -1,7 +1,11 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  onBooking: () => void;
+}
+
+export default function Hero({ onBooking }: HeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -19,8 +23,8 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="/images/mountain-landscape.jpg"
-          alt="Mountain landscape"
+          src="https://cdn.poehali.dev/projects/55744e2d-4556-4263-8988-12208e6de565/files/9c045950-04f2-4939-92b8-22ae4b3b0e91.jpg"
+          alt="A-Frame домик в горах"
           className="w-full h-full object-cover"
         />
       </motion.div>
@@ -33,7 +37,10 @@ export default function Hero() {
         <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed">
           Уникальные A-Frame домики в окружении природы. Отдых, который меняет взгляд на жизнь.
         </p>
-        <button className="mt-8 border border-white text-white px-8 py-3 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
+        <button
+          onClick={onBooking}
+          className="mt-8 border border-white text-white px-8 py-3 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+        >
           Забронировать
         </button>
       </div>
