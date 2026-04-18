@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Featured from "@/components/Featured";
 import Promo from "@/components/Promo";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 import BookingModal from "@/components/BookingModal";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <Hero onBooking={() => setModalOpen(true)} />
       <Featured onBooking={() => setModalOpen(true)} />
       <Promo />
+      <About />
       <Contact />
       <Footer />
       <BookingModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
