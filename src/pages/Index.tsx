@@ -5,6 +5,7 @@ import Featured from "@/components/Featured";
 import Promo from "@/components/Promo";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
+import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import BookingModal from "@/components/BookingModal";
 
@@ -18,6 +19,7 @@ const Index = () => {
       <Featured onBooking={() => setModalOpen(true)} />
       <Promo />
       <About />
+      <Gallery />
       <Contact />
       <Footer />
       <BookingModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
