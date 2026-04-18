@@ -7,8 +7,8 @@ export default function Featured({ onBooking }: FeaturedProps) {
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0 bg-white">
       <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
         <img
-          src="https://cdn.poehali.dev/projects/55744e2d-4556-4263-8988-12208e6de565/files/19fac157-46d3-4768-a0da-157b4b4c1c51.jpg"
-          alt="Интерьер A-Frame домика"
+          src="https://cdn.poehali.dev/projects/55744e2d-4556-4263-8988-12208e6de565/bucket/8f0b8d75-902b-4e3d-ba80-6ac5c2de2fd5.png"
+          alt="Интерьер A-Frame домика Эко-Хаус"
           className="w-full h-full object-cover"
         />
       </div>
