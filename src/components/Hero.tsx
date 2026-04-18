@@ -23,8 +23,8 @@ export default function Hero({ onBooking }: HeroProps) {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="https://cdn.poehali.dev/projects/55744e2d-4556-4263-8988-12208e6de565/bucket/111770eb-e681-4892-b11f-e6abaebab7ae.png"
-          alt="A-Frame домики Эко-Хаус"
+          src="https://cdn.poehali.dev/projects/55744e2d-4556-4263-8988-12208e6de565/files/2c4a25f4-6e90-4f75-a587-35a00921a4fe.jpg"
+          alt="A-Frame домики на фоне Саян"
           className="w-full h-full object-cover"
         />
       </motion.div>
