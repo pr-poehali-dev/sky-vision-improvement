@@ -30,12 +30,11 @@ export default function Hero({ onBooking }: HeroProps) {
       </motion.div>
 
       <div className="relative z-10 text-center text-white px-6">
-        <p className="text-sm uppercase tracking-widest mb-4 opacity-80">Гостевые дома</p>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-tight">
-          ЖИВИ<br />В ГОРАХ
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6 leading-tight">
+          ЭКО-ХАУС
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed">
-          Уникальные A-Frame домики в окружении природы. Отдых, который меняет взгляд на жизнь.
+        <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest uppercase opacity-90 mb-2">
+          Отдых&nbsp;&nbsp;·&nbsp;&nbsp;Вышка&nbsp;&nbsp;·&nbsp;&nbsp;Жемчуг
         </p>
         <button
           onClick={onBooking}

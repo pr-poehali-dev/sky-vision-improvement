@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Icon from "@/components/ui/icon";
 
+const BACKEND_URL = "https://functions.poehali.dev/5ed651f4-dad5-4b9c-95a6-8455624a1d2f";
+
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -10,15 +12,33 @@ interface BookingModalProps {
 export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   const [form, setForm] = useState({ name: "", phone: "", dates: "", guests: "2" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    try {
+      await fetch(BACKEND_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      setSubmitted(true);
+    } catch {
+      setError("Не удалось отправить заявку. Попробуйте ещё раз.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleClose = () => {
     onClose();
-    setTimeout(() => setSubmitted(false), 400);
+    setTimeout(() => {
+      setSubmitted(false);
+      setError("");
+    }, 400);
   };
 
   return (
@@ -97,11 +117,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       <option value="4">4 гостя</option>
                     </select>
                   </div>
+                  {error && <p className="text-red-500 text-sm">{error}</p>}
                   <button
                     type="submit"
-                    className="mt-2 bg-black text-white py-3 uppercase text-sm tracking-wide hover:bg-neutral-800 transition-colors"
+                    disabled={loading}
+                    className="mt-2 bg-black text-white py-3 uppercase text-sm tracking-wide hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Отправить заявку
+                    {loading ? "Отправляем..." : "Отправить заявку"}
                   </button>
                 </form>
               </>
