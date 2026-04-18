@@ -29,19 +29,21 @@ export default function Hero({ onBooking }: HeroProps) {
         />
       </motion.div>
 
-      <div className="relative z-10 text-center text-white px-6">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6 leading-tight">
+      <div className="relative z-10 text-center px-6 absolute bottom-16 left-0 right-0">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6 leading-tight text-blue-500">
           ЭКО-ХАУС
         </h1>
-        <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest uppercase opacity-90 mb-2">
+        <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest uppercase opacity-90 mb-2 text-blue-500">
           Отдых&nbsp;&nbsp;·&nbsp;&nbsp;Вышка&nbsp;&nbsp;·&nbsp;&nbsp;Жемчуг
         </p>
-        <button
-          onClick={onBooking}
-          className="mt-8 border border-white text-white px-8 py-3 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+        <a
+          href="https://eco-house.ru"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-block border border-blue-500 text-blue-500 px-8 py-3 uppercase text-sm tracking-wide hover:bg-blue-500 hover:text-white transition-all duration-300"
         >
           Забронировать
-        </button>
+        </a>
       </div>
     </div>
   );
